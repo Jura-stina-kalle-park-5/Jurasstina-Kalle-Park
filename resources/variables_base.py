@@ -1,5 +1,5 @@
 import os
-import BookSafariPage
+import resources.page_objects_models.BookSafariPage as BookSafariPage
 
 BROWSER = "chrome"
 current_directory = os.getcwd().replace('\\', '/')
