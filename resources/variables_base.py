@@ -1,9 +1,11 @@
 import resources.page_object_models.BuyTicketsPage as BuyTicketsPage
 import resources.page_object_models.CartPage as CartPage
 import resources.page_object_models.BookSafariPage as BookSafariPage
+import resources.page_object_models.RegisterPage as RegisterPage
+import resources.page_object_models.LoginPage as LoginPage
 
 BROWSER = "chrome"
-url = "file:///${EXECDIR}/website/jurap.html"
+url = f"file:///${EXECDIR}/website/jurap.html"
 
 # Login Entry
 username_with_numbers = '1234'
