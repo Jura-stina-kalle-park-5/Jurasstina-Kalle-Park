@@ -1,8 +1,5 @@
-import os
-
 BROWSER = "chrome"
-current_directory = os.getcwd().replace('\\', '/')
-url = f"file:///{current_directory}/jurap.html"
+url = f"file:///${EXECDIR}/website/jurap.html"
 
 # Login Entry
 username_with_numbers = '1234'
