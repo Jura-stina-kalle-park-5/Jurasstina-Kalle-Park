@@ -1,6 +1,3 @@
-# Page Link
-register_link = "data:section:register-section"
-
 # Page Navigation
 register_section = "id:register-section"  # use with keyword Element Should Be Visible
 register_username_input = "id:reg-username"
