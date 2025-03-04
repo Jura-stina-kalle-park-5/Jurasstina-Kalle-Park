@@ -1,5 +1,7 @@
 import os
-import resources.page_objects_models.BookSafariPage as BookSafariPage
+import resources.page_object_models.BuyTicketsPage as BuyTicketsPage
+import resources.page_object_models.CartPage as CartPage
+import resources.page_object_models.BookSafariPage as BookSafariPage
 
 BROWSER = "chrome"
 current_directory = os.getcwd().replace('\\', '/')
