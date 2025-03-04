@@ -1,3 +1,7 @@
+import resources.page_object_models.BuyTicketsPage as BuyTicketsPage
+import resources.page_object_models.CartPage as CartPage
+import resources.page_object_models.BookSafariPage as BookSafariPage
+
 BROWSER = "chrome"
 url = f"file:///${EXECDIR}/website/jurap.html"
 
