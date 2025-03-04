@@ -26,7 +26,6 @@ home_page_text = "id:home-section"
 
 # Alert Message
 add_to_cart_success_alert = "Item added to cart!"
-checkout_success_alert = "Checkout Summary:"
 
 # Register Page
 register_section = "id:register-section"  # use with keyword Element Should Be Visible
@@ -52,21 +51,3 @@ login_password_field = "id:login-password"
 login_button = "Login"  
 login_message = "id:login-message"
 logout_link = "id:logout-link"
-
-# Buy Tickets
-tickets_section = "id:tickets-section"
-tickets_type_select = "id:ticket-type"
-tickets_adult_ticket = "Adult"
-tickets_child_ticket = "Child"
-tickets_senior_ticket = "Senior"
-tickets_category_select = "id:ticket-category"
-tickets_vip_ticket = "VIP"
-tickets_regular_ticket = "Regular"
-tickets_ticket_quantity = "id:ticket-quantity"
-tickets_form = "id:ticket-form"
-tickets_button = "Add to Cart"
-
-# Cart Page
-cart_section = "id:cart-section"
-cart_items = "css:#cart-details ul"
-cart_checkout_button = "id:checkout-button"
