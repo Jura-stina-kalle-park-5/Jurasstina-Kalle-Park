@@ -21,7 +21,7 @@ steps:
 
   - task: PublishTestResults@2
     inputs:
-      testResultsFormat: 'XUnit' # 'JUnit' | 'NUnit' | 'VSTest' | 'XUnit' | 'CTest'. Alias: testRunner. Required. Test result format. Default: JUnit.
+      testResultsFormat: 'JUnit' # 'JUnit' | 'NUnit' | 'VSTest' | 'XUnit' | 'CTest'. Alias: testRunner. Required. Test result format. Default: JUnit.
       testResultsFiles: 'results/logs/output_feature_test_xunit.xml'
     displayName: 'Publish Robot Framework Test Results'
 
