@@ -3,8 +3,8 @@ Name             Paleontologist
 Documentation    Grupp 5, Victor, Kelley och Mathilda
 ...              Tests for paleontologist
 Library          SeleniumLibrary
-Resource         resources/keyword_files/paleontologist.resource
-Resource         resources/keyword_files/base.resource
+Resource         ${EXECDIR}/resources/keyword_files/paleontologist.resource
+Resource         ${EXECDIR}/resources/keyword_files/base.resource
 Test Setup       Open Browser    ${url}    ${BROWSER}
 Test Teardown    Close Browser
 
@@ -20,7 +20,7 @@ Register user Stina-Palle
     And I should be redirected to the login page
 
 Login user Stina-Palle
-    [Tags]    Victor
+    [Tags]    Victor    new-feature
     [Documentation]    Verifies that Stina-Palle can login
     Given I am registered as Stina-Palle
     And I am on the login page

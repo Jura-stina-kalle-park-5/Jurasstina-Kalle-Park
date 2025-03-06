@@ -1,0 +1,26 @@
+trigger:
+- feature/*
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- template: templates/install-dependencies.yaml
+- script: |
+    robot --variable BROWSER:headlesschrome --pythonpath . --include new-feature --output-dir results/logs/ --xunit output_feature_test_xunit.xml --output output_feature_test.xml --log log_feature_test.html --report report_feature_test.html tests/
+  displayName: 'Run Tests tagged with new-feature'
+
+# Publish the Robot Framework reports as pipeline artifacts.
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(System.DefaultWorkingDirectory)/results/logs/'
+    artifactName: 'robot-reports-feature'
+  displayName: 'Publish Robot Framework Reports'
+
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit' # 'JUnit' | 'NUnit' | 'VSTest' | 'XUnit' | 'CTest'. Alias: testRunner. Required. Test result format. Default: JUnit.
+    testResultsFiles: 'results/logs/output_feature_test_xunit.xml'
+  displayName: 'Publish Robot Framework Test Results'
+
+

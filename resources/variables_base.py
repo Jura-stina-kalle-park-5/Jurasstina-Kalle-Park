@@ -1,9 +1,11 @@
 import os
-from resources.page_object_models.BuyTicketsPage import *
-from resources.page_object_models.CartPage import *
-from resources.page_object_models.BookSafariPage import *
-from resources.page_object_models.RegisterPage import *
-from resources.page_object_models.LoginPage import *
+import sys
+sys.path.append("resources/page_object_models")
+from BuyTicketsPage import *
+from CartPage import *
+from BookSafariPage import *
+from RegisterPage import *
+from LoginPage import *
 
 BROWSER = "chrome"
 current_directory = os.getcwd().replace('\\', '/')
