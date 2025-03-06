@@ -1,7 +1,6 @@
 *** Settings ***
 Library          SeleniumLibrary
-Variables        resources/variables_base.py
-Variables        resources/variables_miser.py
+Variables        ${EXECDIR}/resources/variables_base.py
 
 *** Keywords ***
 the total price should be ${ticket_price} and not reflect a ticket discount

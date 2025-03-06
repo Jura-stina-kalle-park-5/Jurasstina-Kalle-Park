@@ -1,6 +1,6 @@
 *** Settings ***
 Library          SeleniumLibrary
-Variables        resources/variables_base.py
+Variables        ${EXECDIR}/resources/variables_base.py
 
 *** Keywords ***
 I am on the ${page_name} page

@@ -3,8 +3,8 @@ Name             Miser
 Documentation    Grupp 5, Victor, Kelley och Mathilda
 ...              Tests for Snåla-Kalle
 Library          SeleniumLibrary
-Resource         resources/keyword_files/base.resource
-Resource         resources/keyword_files/miser.resource
+Resource         ${EXECDIR}/resources/keyword_files/base.resource
+Resource         ${EXECDIR}/resources/keyword_files/miser.resource
 Test Setup       Open Browser    ${url}    ${BROWSER}
 Test Teardown    Close Browser
 
