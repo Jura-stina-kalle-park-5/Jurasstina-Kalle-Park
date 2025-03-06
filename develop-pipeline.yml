@@ -13,7 +13,7 @@ steps:
     displayName: 'Run Test File "miser"'
 
   - script: |
-      robot --test "No discount on VIP Senior Entry Ticket" --output results/logs/output_miser_test_ticket.xml --log results/logs/log_miser_test_ticket.html --report results/logs/report_miser_test_ticket.html tests/
+      robot --test "Add a Regular Adult ticket to cart" --output results/logs/output_pale_test_ticket.xml --log results/logs/log_pale_test_ticket.html --report results/logs/report_pale_test_ticket.html tests/
     displayName: 'Run Specific Tests'
 
   # Publish the Robot Framework reports as pipeline artifacts.
