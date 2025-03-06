@@ -23,10 +23,3 @@ steps:
       artifactName: 'robot-reports-develop'
     displayName: 'Publish Robot Framework Reports'
 
-  - task: PublishTestResults@2
-    inputs:
-      testResultsFormat: 'JUnit' # 'JUnit' | 'NUnit' | 'VSTest' | 'XUnit' | 'CTest'. Alias: testRunner. Required. Test result format. Default: JUnit.
-      testResultsFiles: 'results/logs/output_feature_test_xunit.xml'
-    displayName: 'Publish Robot Framework Test Results'
-
-
