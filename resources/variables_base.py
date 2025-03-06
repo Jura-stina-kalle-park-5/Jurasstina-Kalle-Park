@@ -7,7 +7,7 @@ from BookSafariPage import *
 from RegisterPage import *
 from LoginPage import *
 
-BROWSER = "chrome"
+BROWSER = "headlesschrome"
 current_directory = os.getcwd().replace('\\', '/')
 url = f"file:///{current_directory}/website/jurap.html"
 
