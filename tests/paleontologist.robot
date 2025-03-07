@@ -38,7 +38,7 @@ Add a Regular Adult ticket to cart
     Then the Regular Adult Ticket should be listed on the cart page
 
 Book regular safari on a workday
-    [Tags]    Victor
+    [Tags]    Victor    new-feature
     [Documentation]    Verifies that the two regular safaris are in the cart after adding them, with the prerequisite of having a regular ticket first.
     Given I am logged in as Stina-Palle
     And I have a Regular Adult ticket in my cart
