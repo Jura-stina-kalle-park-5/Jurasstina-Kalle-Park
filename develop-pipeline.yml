@@ -1,10 +1,6 @@
-trigger:
-  branches:
-    include:
-    - develop
-    exclude:
-    - feature/*
-    - main
+trigger: none
+pr:
+- develop
 
 pool:
   vmImage: 'ubuntu-latest'
@@ -14,12 +10,27 @@ steps:
 
 # Scripts for running all tests in a file and to run tests based on test case name (integration testing)
 - script: |
-      robot --variable BROWSER:headlesschrome --output results/logs/output_miser_test.xml --log results/logs/log_miser_test.html --report results/logs/report_miser_test.html tests/miser.robot
+    robot \
+    --variable    BROWSER:headlesschrome \
+    --output-dir  results/logs/ \
+    --xunit       output_miser_test_xunit.xml \
+    --output      output_miser_test.xml \
+    --log         log_miser_test.html \
+    --report      report_miser_test.html \
+    tests/miser.robot
   displayName: 'Run Test File "miser"'
 
 - script: |
-      robot --variable BROWSER:headlesschrome --test "Add a Regular Adult ticket to cart" --output results/logs/output_pale_test_ticket.xml --log results/logs/log_pale_test_ticket.html --report results/logs/report_pale_test_ticket.html tests/
-  displayName: 'Run Specific Tests'
+    robot \
+    --variable    BROWSER:headlesschrome \
+    --test "Add a Regular Adult ticket to cart" \
+    --output-dir  results/logs/ \
+    --xunit       output_pale_test_ticket_xunit.xml \
+    --output      output_pale_test_ticket.xml \
+    --log         log_pale_test_ticket.html \
+    --report      report_pale_test_ticket.html \
+    tests/
+  displayName: 'Run Specific Test'
 
 # Publish the Robot Framework reports as pipeline artifacts.
 - task: PublishPipelineArtifact@1
@@ -28,3 +39,8 @@ steps:
     artifactName: 'robot-reports-develop'
   displayName: 'Publish Robot Framework Reports'
 
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'JUnit' # 'JUnit' | 'NUnit' | 'VSTest' | 'XUnit' | 'CTest'. Alias: testRunner. Required. Test result format. Default: JUnit.
+    testResultsFiles: 'results/logs/output_*_xunit.xml'
+  displayName: 'Publish Robot Framework Test Results'
