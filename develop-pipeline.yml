@@ -23,7 +23,7 @@ steps:
 - script: |
     robot \
     --variable    BROWSER:headlesschrome \
-    --test "Add a Regular Adult ticket to cart"
+    --test "Add a Regular Adult ticket to cart" \
     --output-dir  results/logs/ \
     --xunit       output_pale_test_ticket_xunit.xml \
     --output      output_pale_test_ticket.xml \
